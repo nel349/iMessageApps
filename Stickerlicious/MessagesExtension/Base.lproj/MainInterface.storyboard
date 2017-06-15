@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJs-fr-ncJ">
+                                <rect key="frame" x="0.0" y="67" width="320" height="461"/>
+                                <connections>
+                                    <segue destination="aQ4-wX-XiS" kind="embed" id="hB2-UF-2mI"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zVp-EK-Zq9">
+                                <rect key="frame" x="26" y="28" width="188" height="31"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AWp-7Y-IBj">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="handleChocoholicChanged:" destination="ObA-dk-sSI" eventType="valueChanged" id="5Pa-46-KNV"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chocoholic Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTp-4a-vIg">
+                                        <rect key="frame" x="54" y="0.0" width="134" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zVp-EK-Zq9" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" constant="10" id="A2G-gE-xup"/>
+                            <constraint firstItem="jJs-fr-ncJ" firstAttribute="top" secondItem="zVp-EK-Zq9" secondAttribute="bottom" constant="8" id="CMG-Ry-OxJ"/>
+                            <constraint firstItem="jJs-fr-ncJ" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="Z9W-mZ-ZJf"/>
+                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="jJs-fr-ncJ" secondAttribute="bottom" id="cb7-dr-58F"/>
+                            <constraint firstAttribute="trailing" secondItem="jJs-fr-ncJ" secondAttribute="trailing" id="pKG-kD-OMT"/>
+                            <constraint firstItem="zVp-EK-Zq9" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" constant="8" id="rvP-qj-s03"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.600000000000001" y="37.781109445277366"/>
+        </scene>
+        <!--Sticker Collection View Controller-->
+        <scene sceneID="cLE-CZ-DJw">
+            <objects>
+                <collectionViewController id="aQ4-wX-XiS" customClass="StickerCollectionViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="S14-rR-blU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="461"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="VI5-Ns-uiv">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="40" height="25"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StickerCollectionViewCell" id="ayf-EL-9ft" customClass="StickerCollectionViewCell" customModule="MessagesExtension" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="25" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSx-4S-xUE" customClass="MSStickerView">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="kSx-4S-xUE" secondAttribute="bottom" id="7Ya-9Z-P3s"/>
+                                    <constraint firstAttribute="trailing" secondItem="kSx-4S-xUE" secondAttribute="trailing" id="DQw-Jw-74Y"/>
+                                    <constraint firstItem="kSx-4S-xUE" firstAttribute="leading" secondItem="ayf-EL-9ft" secondAttribute="leading" id="Yzm-vc-fkg"/>
+                                    <constraint firstItem="kSx-4S-xUE" firstAttribute="top" secondItem="ayf-EL-9ft" secondAttribute="top" id="bp1-7a-29A"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="stickerView" destination="kSx-4S-xUE" id="yJB-e9-VIx"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SectionHeader" id="vT2-RJ-HTZ" customClass="SectionHeader" customModule="MessagesExtension" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NqZ-BW-IVf">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uIh-8v-Q1Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </view>
+                                    <blurEffect style="light"/>
+                                </visualEffectView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DA-Xa-xao">
+                                    <rect key="frame" x="139" y="2" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="NqZ-BW-IVf" firstAttribute="top" secondItem="vT2-RJ-HTZ" secondAttribute="top" id="L0Q-JI-edz"/>
+                                <constraint firstAttribute="trailing" secondItem="NqZ-BW-IVf" secondAttribute="trailing" id="LRd-oY-Xj5"/>
+                                <constraint firstItem="6DA-Xa-xao" firstAttribute="centerX" secondItem="vT2-RJ-HTZ" secondAttribute="centerX" id="MjY-ho-ygR"/>
+                                <constraint firstItem="NqZ-BW-IVf" firstAttribute="leading" secondItem="vT2-RJ-HTZ" secondAttribute="leading" id="NYo-64-Z9T"/>
+                                <constraint firstAttribute="bottom" secondItem="NqZ-BW-IVf" secondAttribute="bottom" id="nO5-Vi-FOX"/>
+                                <constraint firstItem="6DA-Xa-xao" firstAttribute="centerY" secondItem="vT2-RJ-HTZ" secondAttribute="centerY" id="nr2-Hi-3DD"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="label" destination="6DA-Xa-xao" id="a4Y-Ct-7lT"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="aQ4-wX-XiS" id="PJ2-rD-H6V"/>
+                            <outlet property="delegate" destination="aQ4-wX-XiS" id="bqS-Zw-4ZN"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rOM-QT-lm2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778" y="149"/>
+        </scene>
+    </scenes>
+</document>
